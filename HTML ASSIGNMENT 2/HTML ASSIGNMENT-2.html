@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      table,
+      th,
+      td {
+        border: 1px solid black;
+        border-collapse: collapse;
+        padding: 5px;
+      }
+
+      #music {
+        margin-left: 64px;
+      }
+
+      #travelling {
+        margin-left: 64px;
+      }
+
+      #sports {
+        margin-left: 64px;
+      }
+      #address {
+        margin-top: -15px;
+        margin-left: 64px;
+      }
+    </style>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+    <h1>Student Registration Form</h1>
+    <form method="post" action="submit-form.php">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required /><br /><br />
+
+      <label for="phone">Phone No:</label>
+      <input
+        type="tel"
+        id="phone"
+        name="phone"
+        pattern="[0-9]{10}"
+        required
+      /><br /><br />
+
+      <label for="dob">Date of Birth:</label>
+      <input type="date" id="dob" name="dob" required /><br /><br />
+
+      <label for="address">Address:</label><br/>
+      <textarea id="address" name="address" rows="5" cols="65" required></textarea><br /><br />
+
+      <label for="gender">Gender:</label>
+      <input type="radio" id="male" name="gender" value="male" required />
+      <label for="male">Male</label>
+      <input type="radio" id="female" name="gender" value="female" />
+      <label for="female">Female</label><br /><br />
+
+      <label for="city">City:</label>
+      <select id="city" name="city" required>
+        <option value="">Select a city</option>
+        <option value="delhi">Delhi</option>
+        <option value="mumbai">Mumbai</option>
+        <option value="kolkata">Kolkata</option>
+        <option value="chennai">Chennai</option></select
+      ><br /><br />
+
+      <label for="hobbies">Hobbies:</label>
+
+      <input type="checkbox" id="reading" name="hobbies[]" value="reading" />
+      <label for="reading">Reading</label><br />
+
+      <input type="checkbox" id="music" name="hobbies[]" value="music">
+      <label for="music">Music</label><br />
+
+      <input
+        type="checkbox"
+        id="travelling"
+        name="hobbies[]"
+        value="travelling"
+      />
+      <label for="travelling">Travelling</label><br />
+
+      <input type="checkbox" id="sports" name="hobbies[]" value="sports" />
+      <label for="sports">Sports</label><br /><br />
+
+      <input type="submit" value="Submit" />
+      <input type="reset" value="Reset" />
+    </form>
+	<br>
+
+    <div class="table">
+      <h1>Student Records</h1>
+      <table>
+        <thead>
+          <tr>
+            <th>SNo</th>
+            <th>Name</th>
+            <th>Phone No</th>
+            <th>Gender</th>
+            <th>City</th>
+            <th>Hobbies</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>Shivam</td>
+            <td>9304182006</td>
+            <td>Male</td>
+            <td>Delhi</td>
+            <td rowspan="1">Reading<br />Travelling</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>Rani</td>
+            <td>9876543210</td>
+            <td>Female</td>
+            <td>Mumbai</td>
+            <td rowspan="1">Travelling<br />Music</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>shaqib</td>
+            <td>9876543267</td>
+            <td>Male</td>
+            <td>Mumbai</td>
+            <td rowspan="1">Music<br />Sports</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+	<br>
+	<br>
+
+
+
+  <!-- demo page -->
+  <h5>Positioning Demo(relative & absolute)</h5>
+  <div id="box1">
+		<p>This is a relative positioned box.</p>
+		<p>It is positioned 50px from the top and 50px from the left of its parent container.</p>
+	</div>
+	
+  
+	<div id="box2">
+		<p>This is an absolute positioned box.</p>
+		<p>It is positioned 100px from the top and 100px from the left of the nearest positioned ancestor.</p>
+	</div>
+	
+	<!-- Float demo -->
+  <h5 id="floatid">Floating Demo(Left & Right)</h5>
+	<div id="float-left">
+		<p>This box is floated left.</p>
+		<p>It takes up 50% of the width of its parent container.</p>
+	</div>
+	
+	<div id="float-right">
+		<p>This box is floated right.</p>
+		<p>It takes up 50% of the width of its parent container.</p>
+	</div>
+	
+	<div class="clearfix"></div>
+	
+	<!-- Display demo -->
+  <h5>Display Demo(Block & Inline)</h5>
+
+	<div id="block">
+		<p>This is a block-level element.</p>
+		<p>It takes up the full width available and starts on a new line.</p>
+	</div>
+	
+	<span id="inline">
+		<p>This is an inline element.</p>
+		<p>It only takes up as much width as necessary and doesn't start on a new line.</p>
+	</span>
+	
+	<!-- Visibility demo -->
+  <h5>Visibility Demo(Visible & Hidden)</h5>
+  <p>This box is hidden.</p>
+	<div id="hidden">
+		<p>This box is hidden.</p>
+	</div>
+
+
+	<div id="visible">
+		<p>This box is visible.</p>
+	</div>
+	
+ 
+
+	
+ </body>
+</html>
